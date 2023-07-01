@@ -12,6 +12,7 @@ function getSub() {
     var minute = parseInt(time / 60);
     time = time % 60;
     return `${day}天${hour}小时${minute}分钟${time}秒`;
+}
 
 setInterval(function () {
     var count = document.getElementsByTagName("time")[0];
