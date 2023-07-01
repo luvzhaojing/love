@@ -11,8 +11,7 @@ function getSub() {
     time = time % (60 * 60);
     var minute = parseInt(time / 60);
     time = time % 60;
-    return `${day}Ìì${hour}Ğ¡Ê±${minute}·ÖÖÓ${time}Ãë`;
-}
+    return `${day}å¤©${hour}å°æ—¶${minute}åˆ†é’Ÿ${time}ç§’`;
 
 setInterval(function () {
     var count = document.getElementsByTagName("time")[0];
