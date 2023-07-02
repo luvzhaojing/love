@@ -6,7 +6,7 @@ body {
 }
 
 body {
-    cursor: url('/image/cursor.ico'), default;
+    cursor: url('/redheart/cursor.ico'), default;
 }
 
 @media (min-width: 1024px) {
