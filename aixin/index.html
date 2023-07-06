@@ -24,7 +24,36 @@ canvas {
  </HEAD>
 
  <BODY>
- 
+ <!-- 显示记录爱情天数的元素 -->
+<p id="demo" style="color:pink; position:absolute; top:50%; left:50%; transform:translate(-50%, -50%);"></p>
+
+<script>
+// 设置相爱的开始日期
+var startDate = new Date("Mar 4, 2021 15:34:32").getTime();
+
+// 每隔1秒更新记录
+var x = setInterval(function() {
+
+  // 获取当前的日期和时间
+  var now = new Date().getTime();
+    
+  // 计算距离开始日期的时间差
+  var distance = now - startDate;
+    
+  // 计算相爱的天数、小时、分钟和秒
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+  // 在元素中显示结果
+  document.getElementById("demo").innerHTML = "亲爱的，自2021年3月4日认识你，已经 " + days + "天 " + hours + "小时 "
+    + minutes + "分钟 " + seconds + "秒 ";
+    
+}, 1000);
+</script>
+
+</script>
   <canvas id="pinkboard"></canvas>
   <script>
   /*
