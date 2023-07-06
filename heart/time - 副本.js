@@ -16,6 +16,5 @@ function getSub() {
 
 setInterval(function () {
     var count = document.getElementsByTagName("time")[0];
-    count.style.textAlign = "center";
-    count.innerHTML = "我们相识了<br>" + getSub();//文字可修改
+    count.textContent = getSub();
 }, 1000);
