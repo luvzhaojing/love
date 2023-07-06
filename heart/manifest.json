@@ -13,7 +13,7 @@
       "sizes": "192x192"
     },
     {
-      "src": "./heart/logo.png",
+      "src": "https://cdn.jsdelivr.net/gh/ziliudi/love//heart/logo.png",
       "type": "image/png",
       "sizes": "512x512"
     }
