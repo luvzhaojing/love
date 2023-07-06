@@ -3,12 +3,12 @@
   "name": "Ours Love Day",
   "icons": [
     {
-      "src": "./favicon.ico",
+      "src": "https://cdn.jsdelivr.net/gh/ziliudi/love/heart/favicon.ico",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     },
     {
-      "src": "./heart/logo.png",
+      "src": "https://cdn.jsdelivr.net/gh/ziliudi/love/heart/logo.png",
       "type": "image/png",
       "sizes": "192x192"
     },
