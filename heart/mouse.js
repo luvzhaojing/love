@@ -10,7 +10,7 @@ document.body.addEventListener("mousemove", function (event) {
     heart.style.animation = '1s';
     heart.style.opacity = 1;
     heart.style.zIndex = 2;
-    heart.innerHTML = '<img src="https://cdn.jsdelivr.net/gh/ziliudi/love/heart/cursor.ico" />';
+    heart.innerHTML = '<img src="https://cdn.jsdelivr.net/gh/luvzhaojing/love/heart/cursor.ico" />';
     document.body.appendChild(heart);
     var task = setInterval(function (heart) {
         // heart.style.top = `${parseInt(heart.style.top.replace("px", "")) - 18}px`;
