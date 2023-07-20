@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>瀑布流照片墙</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            column-count: 3;
+            column-gap: 10px;
+            margin: 10px;
+        }
+        .container img {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        .enlarged {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.8);
+        }
+        .enlarged img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            max-width: 100%;
+            max-height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <h1>瀑布流照片墙</h1>
+    <div class="container">
+        <img src="https://cdn.jsdelivr.net/gh/ziliudi/img@main/e6f18d7cgy1heik2ea3y4j21hc0u07kn.jpg" alt="Image 1">
+        <img src="https://cdn.jsdelivr.net/gh/ziliudi/img@main/c5145008gy1hemj6nzinlj22dc35su0y.jpg" alt="Image 2">
+        <img src="https://cdn.jsdelivr.net/gh/ziliudi/img@main/c5145008gy1hemjb1xo24j22dc35snpf.jpg" alt="Image 3">
+        <img src="https://cdn.jsdelivr.net/gh/ziliudi/img@main/c5145008gy1hemj7e86p8j22dc35sqv6.jpg" alt="Image 4">
+        <img src="https://cdn.jsdelivr.net/gh/ziliudi/img@main/006wQwytly1heokk6ehrtj30u0140wnb.jpg" alt="Image 5">
+        <img src="https://cdn.jsdelivr.net/gh/ziliudi/img@main/006pEvK8gy1hcgz6yndj3j32c0340qv6.jpg" alt="Image 6">
+    </div>
+    <div class="enlarged" style="display:none;">
+        <img src="" alt="">
+    </div>
+    <script>
+        let images = document.querySelectorAll('.container img');
+        let enlarged = document.querySelector('.enlarged');
+        let enlargedImg = enlarged.querySelector('img');
+        
+        let currentImageIndex = -1;
+        
+        images.forEach((image, index) => {
+            image.addEventListener('dblclick', () => {
+                currentImageIndex = index;
+                enlargedImg.src = image.src;
+                enlarged.style.display = 'block';
+            });
+        });
+        
+        enlarged.addEventListener('click', () => {
+            enlarged.style.display = 'none';
+        });
+        
+        enlarged.addEventListener('wheel', event => {
+            event.preventDefault();
+            
+            if (event.deltaY > 0) {
+                currentImageIndex++;
+                if (currentImageIndex >= images.length) {
+                    currentImageIndex = images.length - 1;
+                }
+            } else if (event.deltaY < 0) {
+                currentImageIndex--;
+                if (currentImageIndex < 0) {
+                    currentImageIndex = 0;
+                }
+            }
+            
+            enlargedImg.src = images[currentImageIndex].src;
+        });
+    </script>
+</body>
+<footer class="footer bg-dark py-3 py-lg-4" style="margin-top: 110px;margin-bottom: -160px;">
+<div class="container">
+<div class="d-lg-flex flex-md-fill align-items-lg-center">
+<div class="d-lg-flex flex-lg-column mr-lg-4">
+<div class="footer-copyright text-xs" style="color: #ff83b6;">
+<script type="text/javascript">
+<!-- Begin
+copyright=new Date();//取得当前的日期
+update=copyright.getFullYear();//取得当前的年份
+document.write("Copyright &copy; 2021-"+ update + " 杨洪祥版权所有.");//update 自动更新的年份
+//  End -->
+
+</script>
+</div>
+</div>
+</footer>
+</html>
+
