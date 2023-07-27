@@ -1,0 +1,21 @@
+{
+  "name": "LoveTree",
+  "version": "1.0.0",
+  "description": "A love tree webpage made with HTML and JavaScript",
+  "main": "index.html",
+  "scripts": {
+    "start": "open index.html",
+    "serve": "serve ."
+    "build": "webpack --mode production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ziliudi/LoveTree.git"
+  },
+  "author": "ziliudi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ziliudi/LoveTree/issues"
+  },
+  "homepage": "https://github.com/ziliudi/LoveTree#readme"
+}
