@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>小红书图片提取</title>
+</head>
+<body>
+    <h1>小红书图片提取</h1>
+    <input type="text" id="url" placeholder="请输入小红书笔记网页地址或APP分享链接">
+    <button onclick="extractImages()">提取图片</button>
+    <div id="images"></div>
+
+    <script>
+        function extractImages() {
+            var url = document.getElementById("url").value;
+            var xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    var traceids = this.responseText.match(/traceid":"(.*?)"/g);
+                    var imagesDiv = document.getElementById("images");
+                    imagesDiv.innerHTML = "";
+                    for (var i = 0; i < traceids.length; i++) {
+                        var traceid = traceids[i].split('"')[3];
+                        var imgUrl = "https://sns-img-qc.xhscdn.com/" + traceid;
+                        var imgElement = document.createElement("img");
+                        imgElement.src = imgUrl;
+                        imagesDiv.appendChild(imgElement);
+                        var copyButton = document.createElement("button");
+                        copyButton.innerHTML = "复制";
+                        copyButton.onclick = function() { copyToClipboard(imgUrl); };
+                        imagesDiv.appendChild(copyButton);
+                        var downloadButton = document.createElement("a");
+                        downloadButton.innerHTML = "下载";
+                        downloadButton.href = imgUrl;
+                        downloadButton.download = traceid + ".jpg";
+                        imagesDiv.appendChild(downloadButton);
+                    }
+                }
+            };
+            xhr.open("GET", url, true);
+            xhr.send();
+        }
+
+        function copyToClipboard(text) {
+            var dummy = document.createElement("textarea");
+            document.body.appendChild(dummy);
+            dummy.value = text;
+            dummy.select();
+            document.execCommand("copy");
+            document.body.removeChild(dummy);
+        }
+    </script>
+</body>
+</html>
