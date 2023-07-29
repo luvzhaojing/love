@@ -12,10 +12,13 @@
     <script>
         function extractImages() {
             var url = document.getElementById("url").value;
-            var proxyUrl = 'https://cors-anywhere.herokuapp.com/';
-            fetch(proxyUrl + url)
+            fetch(url)
                 .then(response => response.text())
                 .then(data => {
+                    if (data === null) {
+                        console.error("data 变量的值为 null");
+                        return;
+                    }
                     var traceids = data.match(/traceid":"(.*?)"/g);
                     var imagesDiv = document.getElementById("images");
                     imagesDiv.innerHTML = "";
