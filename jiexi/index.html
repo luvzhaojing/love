@@ -12,10 +12,11 @@
     <script>
         function extractImages() {
             var url = document.getElementById("url").value;
-            var xhr = new XMLHttpRequest();
-            xhr.onreadystatechange = function() {
-                if (this.readyState == 4 && this.status == 200) {
-                    var traceids = this.responseText.match(/traceid":"(.*?)"/g);
+            var proxyUrl = 'https://cors-anywhere.herokuapp.com/';
+            fetch(proxyUrl + url)
+                .then(response => response.text())
+                .then(data => {
+                    var traceids = data.match(/traceid":"(.*?)"/g);
                     var imagesDiv = document.getElementById("images");
                     imagesDiv.innerHTML = "";
                     for (var i = 0; i < traceids.length; i++) {
@@ -34,10 +35,7 @@
                         downloadButton.download = traceid + ".jpg";
                         imagesDiv.appendChild(downloadButton);
                     }
-                }
-            };
-            xhr.open("GET", url, true);
-            xhr.send();
+                });
         }
 
         function copyToClipboard(text) {
