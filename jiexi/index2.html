@@ -1,0 +1,603 @@
+
+<!DOCTYPE html>
+<html lang="zh" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
+    <meta name="applicable-device" content="pc,mobile"/>
+    <meta http-equiv="Cache-Control" content="no-transform"/>
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    
+    <title>小红书无水印图片视频在线解析-左搜</title>
+    <!-- logo ico -->
+    <link rel="shortcut icon" type="image/x-icon"  href="https://cdn.leftso.com/assets/upload/2023-03/27/7fc4753c4de44483b41231d1a118cf9e.ico"/>
+    <!-- CSS files -->
+    <link href="https://cdn.leftso.com/assets/libs/tabler/css/tabler.min.css" rel="stylesheet"/>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdn.leftso.com/assets/libs/fontawesome-free/css/all.min.css">
+    <!-- SweetAlert2 -->
+    <link rel="stylesheet" href="https://cdn.leftso.com/assets/libs/sweetalert2/sweetalert2.min.css">
+    <meta charset="UTF-8">
+    
+    <meta name="keywords" content="小红书无水印图片免费下载,小红书在线解析,小红书无水印视频提取,小红书视频解析去水印"/>
+    <meta name="description" content="通过小红书开放接口实现小红书印图片视频去水印在线免费下载，小红书无水印图片在线解析免费下载,小红书无水印视频提取视频解析去水印"/>
+    <!--本页面样式-->
+</head>
+<body>
+<div class="page">
+    <!-- Navbar -->
+    <!-- Navbar -->
+    <header class="navbar navbar-expand-md navbar-light d-print-none sticky-top">
+        <div class="container-xl">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-menu" aria-controls="navbar-menu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <h1 class="navbar-brand navbar-brand-autodark d-none-navbar-horizontal pe-0 pe-md-3">
+                <a href="/">
+                    <img alt="logo" style="max-height: 32px;" src="https://cdn.leftso.com/assets/upload/2023-03/27/845648fe18314c01a7146cdaea8ebdcf.png">
+                </a>
+            </h1>
+            <div class="navbar-nav flex-row order-md-last">
+                <div class="nav-item d-none d-md-flex me-3">
+                    <form autocomplete="off" id="globalSearchForm" onsubmit="return globalSearch()">
+                        <div class="input-icon">
+                    <span class="input-icon-addon">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><circle cx="10" cy="10" r="7" /><line x1="21" y1="21" x2="15" y2="15" /></svg>
+                    </span>
+                            <input type="text"  name="keywords" class="form-control" placeholder="搜索 ..." aria-label="Search in website" required>
+                        </div>
+                    </form>
+                </div>
+                <div class="nav-item d-none" id="loginPanel">
+                    <div class="btn-list">
+                        <a href="/account/login.html" class="btn" rel="nofollow">
+                            <i class="far fa-user icon"></i>
+                            登录/注册
+                        </a>
+                    </div>
+                </div>
+                <div class="nav-item dropdown d-none" id="userProfilePanel">
+                    <a href="#" class="nav-link d-flex lh-1 text-reset p-0" data-bs-toggle="dropdown" aria-label="Open user menu">
+                        <span class="avatar avatar-sm header-avatar">李</span>
+                        <div class="d-none d-xl-block ps-2">
+                            <div class="nickname">用户名称</div>
+                            <div class="mt-1 small text-muted id"></div>
+                        </div>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+                        <a href="#" class="dropdown-item d-none" id="my-menu-home">个人主页</a>
+                        <a href="/user/profile" class="dropdown-item">我的账号</a>
+                        <a href="/user/production/productionList" class="dropdown-item d-none" id="my-menu-production">我的作品</a>
+                        <a href="/user/order/orderList" class="dropdown-item">我的订单</a>
+                        <a href="/user/vipPlans" class="dropdown-item">VIP计划</a>
+                        <div class="dropdown-divider"></div>
+                        <a href="javascript:;" class="dropdown-item text-red" onclick="logout()">
+                            <i class="fas fa-sign-out-alt icon"></i>&nbsp;
+                            注销登录</a>
+                    </div>
+                </div>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-menu">
+                <div class="d-flex flex-column flex-md-row flex-fill align-items-stretch align-items-md-center">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/" >
+                                <span class="nav-link-icon d-md-none d-lg-inline-block"><!-- Download SVG icon from http://tabler-icons.io/i/home -->
+                                    <i class="fas fa-home fs-3"></i>
+                                </span>
+                                <span class="nav-link-title">
+                                  首页
+                                </span>
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle"
+                               data-bs-auto-close="outside" role="button" aria-expanded="false" href="/category/tutorial">
+                                <span class="nav-link-icon d-md-none d-lg-inline-block">
+                                    <i class="fas fa-book fs-3"></i>
+                                </span>
+
+                                
+                                            
+                                            
+
+                                            
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link"
+                               data-bs-auto-close="outside" role="button" aria-expanded="false" href="/category/resources">
+                                <span class="nav-link-icon d-md-none d-lg-inline-block">
+                                    <i class="fab fa-codepen fs-3"></i>
+                                </span>
+
+                                <span class="nav-link-title">资源分享</span>
+                            </a>
+                            
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle"
+                               data-bs-auto-close="outside" role="button" aria-expanded="false" href="/tools">
+                                <span class="nav-link-icon d-md-none d-lg-inline-block">
+                                    <i class="fas fa-wrench fs-3"></i>
+                                </span>
+
+                                <span class="nav-link-title">在线工具</span>
+                            </a>
+                            <div class="dropdown-menu">
+                                <div class="dropdown-menu-columns">
+                                    <div class="dropdown-menu-column">
+                                        
+                                            
+                                                <a class="dropdown-item" href="/tools/douyin.html">
+                                                    
+                                                    <span class="nav-link-title">抖音无水印解析</span>
+                                                </a>
+                                            
+                                            
+
+                                            
+                                        
+                                            
+                                                <a class="dropdown-item" href="/tools/douyin-images.html">
+                                                    
+                                                    <span class="nav-link-title">抖音无水印图集壁纸解析</span>
+                                                </a>
+                                            
+                                            
+
+                                            
+                                        
+                                            
+                                                <a class="dropdown-item" href="/tools/xiaohongshu">
+                                                    
+                                                    <span class="nav-link-title">小红书无水印解析</span>
+                                                </a>
+                                            
+                                            
+
+                                            
+                                        
+                                            
+                                                <a class="dropdown-item" href="/tools/generateQRCode">
+                                                    
+                                                    <span class="nav-link-title">二维码在线生成工具</span>
+                                                </a>
+                                            
+                                            
+
+                                            
+                                        
+                                            
+                                                <a class="dropdown-item" href="/tools/md5.html">
+                                                    
+                                                    <span class="nav-link-title">MD5在线加密工具</span>
+                                                </a>
+                                            
+                                            
+
+                                            
+                                        
+                                            
+                                                <a class="dropdown-item" href="/tools/base64.html">
+                                                    
+                                                    <span class="nav-link-title">Base64在线加解密工具</span>
+                                                </a>
+                                            
+                                            
+
+                                            
+                                        
+                                            
+                                                <a class="dropdown-item" href="/tools/url.html">
+                                                    
+                                                    <span class="nav-link-title">Url在线加解密工具</span>
+                                                </a>
+                                            
+                                            
+
+                                            
+                                        
+                                            
+                                                <a class="dropdown-item" href="/cpu">
+                                                    
+                                                    <span class="nav-link-title">CPU工具箱</span>
+                                                </a>
+                                            
+                                            
+
+                                            
+                                        
+                                            
+                                                <a class="dropdown-item" href="/cpu/top">
+                                                    
+                                                    <span class="nav-link-title">CPU性能排行榜</span>
+                                                </a>
+                                            
+                                            
+
+                                            
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link"
+                               data-bs-auto-close="outside" role="button" aria-expanded="false" href="/software">
+                                <span class="nav-link-icon d-md-none d-lg-inline-block">
+                                    <i class="fab fa-app-store-ios fs-3"></i>
+                                </span>
+
+                                <span class="nav-link-title">小左软件</span>
+                            </a>
+                            
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <div class="page-wrapper">
+        <!-- Page body -->
+        
+    <div class="container-xl">
+      <div class="row">
+        <div class="col mb-4 mt-3">
+          <h1 class="page-title">
+            小红书无水印解析
+          </h1>
+          <div class="text-muted mt-1 fs-5">
+            位置：<a href="/" title="首页" class="link-secondary">首页</a>&gt;<a class="link-secondary"  href="/tools">在线工具</a>&gt;<a class="link-secondary" href="/tool-xhs.html">小红书无水印解析</a>
+            &nbsp;
+          </div>
+        </div>
+        <div class="col-lg-12">
+          <div class="col-lg-9">
+            <div>
+              <!--ad-->
+              <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1498401256393638"
+                      crossorigin="anonymous"></script>
+              <!-- leftso-xhs -->
+              <ins class="adsbygoogle"
+                   style="display:block"
+                   data-ad-client="ca-pub-1498401256393638"
+                   data-ad-slot="3417949683"
+                   data-ad-format="auto"
+                   data-full-width-responsive="true"></ins>
+              <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+              </script>
+            </div>
+            <div class="markdown">
+              <p>本工具通过小红书app及网页获得相应接口，实现小红书的图片和视频在线去水印解析和免费下载。如果你觉得好用，可以打赏站长。</p>
+              <h3>工具使用方法</h3>
+              <ol class="mb-3">
+                <li>打开小红书短视频APP，点开某个图片相册/或者视频，点击右上角分享按钮，在分享弹框中点击复制链接。</li>
+                <li>将复制的内容中的链接粘贴到下面的输入框。（新增自动提取链接，可以直接复制分享信息进来））</li>
+                <li>6月28日起，工具免费限额<span>10</span>次/天（<a href="/account/login.html" rel="nofollow" target="_blank">登录</a>用户免费<span>20</span>次/天），本站VIP不受限制。开通入口：<a href="/user/vipPlans" target="_blank" rel="nofollow">开通VIP</a></li>
+              </ol>
+            </div>
+            <div class="card card-lg">
+              <div class="card-body">
+                <form id="contentForm" onsubmit="return analysisBtn()"  action="#" method="post">
+                  <div class="mb-3">
+                    <label class="form-label">包含短视频地址的分享信息：</label>
+                    <textarea class="form-control" name="url" rows="6" placeholder="包含短视频地址的分享信息" autocomplete="off" required></textarea>
+                  </div>
+                  <div class="row">
+                    <div class="col-lg-8 col-sm-12">
+                      <div class="input-group mb-2">
+                        <input type="text" class="form-control"  placeholder="验证码"  autocomplete="off" required name="code">
+                        <span class="input-group-text p-0">
+                  <img title="点击图片换一个验证码" alt="验证码" src="/validate/douyin.png"
+                       onClick="javascript:this.src='/validate/douyin.png?ts='+new Date().getTime()"
+                       class="img-rounded valid-code-img" height="46px" />
+                </span>
+                      </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-12">
+                      <button class="btn btn-success w-100 form-btn" type="submit">无水印解析</button>
+                    </div>
+                  </div>
+                </form>
+                <div class="content-div d-none">
+                  <h4>解析结果：</h4>
+                  <div class="video-area">
+                    <div class="video-desc">
+                      <h4>视频描述：</h4>
+                      <pre class="videoDescPre"></pre>
+                      <button class="btn btn-primary copy-btn" data-clipboard-action="copy" data-clipboard-target=".videoDescPre" type="button">复制信息</button>
+                    </div>
+                    <div class="video mt-2">
+                      <h4>视频地址：</h4>
+                      <pre class="videoUrlPre"></pre>
+                      <button class="btn btn-primary copy-btn" data-clipboard-action="copy" data-clipboard-target=".videoUrlPre" type="button">复制信息</button>
+                      <a href="#" class="btn btn-success success-a btn-block" rel="external nofollow noreferrer noopener" target="_blank">下载视频</a>
+                    </div>
+                    <div class="cover mt-2">
+                      <h4>封面地址：</h4>
+                      <pre class="coverUrlPre"></pre>
+                      <button class="btn btn-primary copy-btn" data-clipboard-action="copy" data-clipboard-target=".coverUrlPre" type="button">复制信息</button>
+                      <a class="btn btn-success " rel="external nofollow noreferrer noopener" target="_blank">下载封面</a>
+                    </div>
+                    <div class="music-title mt-2">
+                      <h4>音乐标题：</h4>
+                      <pre class="musicTitlePre"></pre>
+                      <button class="btn btn-primary copy-btn" data-clipboard-action="copy" data-clipboard-target=".musicTitlePre" type="button">复制信息</button>
+                    </div>
+                    <div class="music mt-2">
+                      <h4>音乐地址：</h4>
+                      <pre class="musicUrlPre"></pre>
+                      <button class="btn btn-primary copy-btn" data-clipboard-action="copy" data-clipboard-target=".musicUrlPre" type="button">复制信息</button>
+                      <a href="#" class="btn btn-success success-a btn-block" rel="external nofollow noreferrer noopener" target="_blank">下载音乐</a>
+                    </div>
+                  </div>
+                  <div class="image-area">
+                    <div class="preview row">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="alert alert-info mt-2">
+              <strong>提示：</strong> 图片文件下载没有后缀重命名为.jpg或者.webp。视频下载无格式后缀直接重名命为.mp4后缀即可。
+            </div>
+            <div class="mt-3">
+              <h2>更新日志</h2>
+              <ul>
+                <li>2023-06-28 工具备用站<a href="https://www.cundage.com/tools/xhs-images.html" rel="nofollow" class="text-secondary" target="_blank">小红书无水印解析</a>。</li>
+                <li>2023-05-06 支持小红书视频无水印解析</li>
+                <li>2022-12-26 工具上线，支持图集无水印解析。</li>
+              </ul>
+            </div>
+            <div class="mt-3">
+              <div class="card">
+                <div class="card-status-top bg-success"></div>
+                <div class="card-body">
+                  <h3 class="card-title">支持捐赠</h3>
+                  <p class="text-muted">首先感谢您的使用和支持。捐赠支持和广告是维持本站持续发展的基础（服务器等费用）支出资金重要来源，请勿屏蔽广告。</p>
+                  <div class="text-center row">
+                    <img src="https://cdn.leftso.com/assets/img/support-alipay.png" alt="支付宝" class="col-lg-6"/>
+                    <img src="https://cdn.leftso.com/assets/img/support-wechat.png" alt="微信支付" class="col-lg-6"/>
+                  </div>
+                </div>
+              </div>
+
+          </div>
+
+        </div>
+        <div class="col-lg-3"></div>
+      </div>
+    </div>
+  </div>
+
+
+        <footer class="footer footer-transparent d-print-none">
+            
+            <div class="container-xl">
+                <div class="row text-center align-items-center flex-row-reverse">
+                    <div class="col-lg-auto ms-lg-auto">
+                        <ul class="list-inline list-inline-dots mb-0">
+                            <li class="list-inline-item fs-4"><a href="/sitemap.xml" target="_blank" class="link-secondary">网站地图</a></li>
+                            <li class="list-inline-item fs-4"><a href="/license.html" rel="nofollow" target="_blank" class="link-secondary">使用协议</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-12 col-lg-auto mt-3 mt-lg-0">
+                        <ul class="list-inline list-inline-dots mb-0">
+                            <li class="list-inline-item fs-4">
+                                Copyright &copy; 2017-<span>2023</span>
+                                <a href="/" class="link-secondary">左搜</a>.
+                                All rights reserved.
+                            </li>
+                            <li class="list-inline-item fs-4">
+                                <a href="#" class="link-secondary" rel="noopener">
+                                    v1.0.0
+                                </a>
+                            </li>
+                            <li class="list-inline-item fs-4">
+                                <a href="https://beian.miit.gov.cn/" class="link-secondary" rel="nofollow" target="_blank">渝ICP备15001810号-3</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</div>
+
+<div class="position-fixed top-50 end-0">
+    <ul class="list-inline">
+        <li><a rel="nofollow" target="_blank" href="http://wpa.qq.com/msgrd?v=3&amp;uin=290029867&amp;site=qq&amp;menu=yes" class="btn btn-outline-secondary mb-1" title="QQ在线联系"><i class="fab fa-qq fs-2"></i></a></li>
+        <li><a href="javascript:;" class="btn btn-outline-secondary mb-1" onclick="scrollToTop()" title="返回顶部"><i class="fas fa-arrow-up fs-2"></i></a></li>
+    </ul>
+</div>
+
+<!--modal-->
+
+
+
+<!--/modal-->
+
+<!--页脚-->
+
+<!-- Libs JS -->
+<!-- jQuery -->
+<script src="https://cdn.leftso.com/assets/libs/jquery/jquery.min.js"></script>
+<script src="/assets/libs/jquery/jquery.cookie.js"></script>
+<!-- SweetAlert2 -->
+<script src="https://cdn.leftso.com/assets/libs/sweetalert2/sweetalert2.min.js"></script>
+<script src="https://cdn.leftso.com/assets/web/com.js?v=1.0.1"></script>
+
+<!-- Tabler Core -->
+<script src="https://cdn.leftso.com/assets/libs/tabler/js/tabler.min.js"></script>
+<script src="https://cdn.leftso.com/assets/libs/masonry/masonry.pkgd.min.js"></script>
+<script type="text/javascript">
+    $(function (){
+        loadUserInfo();
+        navBarHoverShow();
+    })
+    function navBarHoverShow(){
+        $('.navbar-nav li.dropdown,.navbar-nav div.dropend').hover(function() {
+                let $thisA=$(this).find('a:first');
+                let $next=$thisA.next();
+
+                $thisA.addClass('show');
+                $thisA.attr('aria-expanded',true)
+
+                $next.addClass('show')
+                $next.attr('data-bs-popper','static');
+
+            },
+            function() {
+
+                let $thisA=$(this).find('a:first');
+                let $next=$thisA.next();
+
+                $thisA.removeClass('show');
+                $thisA.attr('aria-expanded',false)
+
+                $next.removeClass('show')
+                $next.removeAttr('data-bs-popper');
+
+            });
+
+        $('.navbar-nav li .dropdown-toggle').click(function (){
+            let $this=$(this);
+            let href=$this.attr('href');
+            if (!href.startsWith('#')){
+                window.location.href=href;
+            }
+        })
+    }
+
+    function globalSearch(){
+        let keyword=$('#globalSearchForm input[name=keywords]').val();
+        if (keyword){
+            window.location='/s/'+encodeURIComponent(keyword);
+        }
+        return false;
+    }
+
+    function loadUserInfo(){
+        let _name=$.cookie('_name');
+        let _id=$.cookie('_id');
+        if (_name){
+            $('#userProfilePanel').removeClass('d-none');
+            let h=_name.substr(0,1);
+            $('#userProfilePanel .header-avatar').text(h);
+            $('#userProfilePanel .nickname').text(_name);
+            $('#userProfilePanel .id').text('ID：'+_id);
+        }else{
+            $('#loginPanel').removeClass('d-none');
+        }
+    }
+
+    function logout(){
+        ajaxPost('/account/logout',{},function (){
+            $.removeCookie('_name',{ path: '/'});
+            $.removeCookie('_id',{ path: '/'});
+            window.location.reload();
+        })
+    }
+
+</script>
+
+  <!--本页脚本-->
+  <script src="https://cdn.leftso.com/assets/libs/clipboard/clipboard.min.js"></script>
+  <script type="text/javascript">
+    $(function(){
+      $('.copy-btn').click(function(){
+        var clipboard = new Clipboard('.copy-btn');
+        clipboard.on('success', function(e) {
+          messageSuccess("已复制到您的粘贴板")
+        });
+
+        clipboard.on('error', function(e) {
+          messageWarning("复制失败,请手动选择复制")
+        });
+      });
+    })
+
+    function analysisBtn() {
+      $('.content-div').addClass('d-none');
+      let formToJSON = getFormToJSON($('#contentForm'));
+      $('.code-input').val('');
+
+      $('.form-btn').attr('disabled',true).text('解析中...');
+      setTimeout(function (){//最多5s，解析不成功也恢复按钮状态
+        $('.form-btn').text('无水印解析').attr('disabled',false);
+      },5000)
+      ajaxPostJSON("/tool-xhs",formToJSON,function (data) {
+        $('.form-btn').text('无水印解析').attr('disabled',false);
+        //成功
+        $('.content-div').removeClass('d-none');
+        if (data.type===0){
+          $('.content-div .video-area').show();
+          $('.content-div .image-area').hide();
+
+          $('.content-div .video-area .video a').attr('href',data.videoUrl);
+          $('.content-div .video-area .video pre').text(data.videoUrl);
+
+          $('.content-div .video-area .cover pre').text(data.videoCoverUrl);
+          $('.content-div .video-area .cover a').attr('href',data.videoCoverUrl);
+
+          $('.content-div .video-area .music pre').text(data.musicUrl);
+          $('.content-div .video-area .music a').attr('href',data.musicUrl);
+
+          $('.content-div .video-area .music-title pre').text(data.musicTitle);
+          $('.content-div .video-area .video-desc pre').text(data.desc);
+
+        }else{
+          $('.content-div .image-area').show();
+          $('.content-div .video-area').hide();
+
+          let $preview=$('.content-div .image-area .preview');
+          $preview.html('');
+          let imgs=data.imageUrls;
+          $.each(imgs,function (index,item){
+            $preview.append(
+                    '<div class="col-sm-12 col-lg-4 col-md-6">\n' +
+                    '      	<a href="'+item+'" target="_blank" rel="external nofollow noreferrer noopener"><img class="card-img-top mt-2" referrerpolicy="no-referrer" src="'+item+'"></a>\n' +
+                    '</div>');
+          })
+          $preview.append('<div class="col-sm-12 col-md-12 col-lg-12"><h4 class="mt-2">地址详情：</h4></div>');
+          $preview.append('<pre class="col-lg-12">'+imgs.join('\n')+'</pre>');
+        }
+        $('.valid-code-img').trigger("click");
+
+
+
+      },function (res) {
+        $('.form-btn').text('无水印解析').attr('disabled',false);
+        $('.valid-code-img').trigger("click");
+        $('.content-div').addClass('d-none');
+        if (res.code === 481 ){
+          confirmWarning(res.message);
+        }else{
+          messageError(res.message);
+        }
+      })
+      return false;
+    }
+  </script>
+  
+
+
+
+
+
+
+
+
+<!--/页脚-->
+</body>
+</html>
